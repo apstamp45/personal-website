@@ -1,0 +1,130 @@
+:root {
+	--main: #a89984;
+	--second: #ebdbb2;
+	--black: #282828;
+	--red: #cc241d;
+	--green: #98971a;
+	--yellow: #d79921;
+	--blue: #458588;
+	--magenta: #b16286;
+	--cyan: #689d6a;
+	--white: #a89984;
+	--black-bright: #3c3836;
+	--red-bright: #fb4934;
+	--green-bright: #b8bb26;
+	--yellow-bright: #fabd2f;
+	--blue-bright: #83a598;
+	--magenta-bright: #d3869b;
+	--cyan-bright: #8ec07c;
+	--white-bright: #ebdbb2;
+	--padding: 5px;
+	--border: 2px;
+}
+
+.white {
+	--main: var(--white);
+	--second: var(--white-bright);
+}
+
+.red {
+	--main: var(--red);
+	--second: var(--red-bright);
+}
+
+.green {
+	--main: var(--green);
+	--second: var(--green-bright);
+}
+
+.yellow {
+	--main: var(--yellow);
+	--second: var(--yellow-bright);
+}
+
+.blue {
+	--main: var(--blue);
+	--second: var(--blue-bright);
+}
+
+.magenta {
+	--main: var(--magenta);
+	--second: var(--magenta-bright);
+}
+
+.cyan {
+	--main: var(--cyan);
+	--second: var(--cyan-bright);
+}
+
+.bordered {
+	border: var(--border) solid var(--main);
+	border-radius: calc(var(--padding) * 4);
+}
+
+.centered {
+	margin: var(--padding) auto 0px auto;
+}
+
+.fixed.menu {
+	position: fixed;
+	top: 0px;
+}
+
+html {
+	background-color: var(--black);
+	color: var(--main);
+	font-family: Helvetica, Cursive;
+	font-size: 16px;
+}
+
+body {
+	/*height: 1500;*/
+	background-color: var(--black);
+	color: var(--main);
+	font-family: Helvetica, Cursive;
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px var(--padding) var(--padding) 0px;
+}
+
+div.bordered {
+	margin: var(--padding) 0px 0px var(--padding);
+	padding: 0px var(--padding) var(--padding) 0px;
+}
+div.centered {
+	margin: 0px auto 0px auto;
+}
+
+h1 {
+	text-align: center;
+	color: var(--second);
+	margin: var(--padding);
+}
+
+p {
+	margin: var(--padding) 0px 0px var(--padding);
+	color: var(--main);
+	padding: calc(var(--padding) * 2);
+	max-width: 500px;
+}
+
+button {
+	margin: var(--padding) 0px 0px var(--padding);
+	background-color: var(--main);
+	color: var(--black);
+	border-radius: calc(var(--padding) * 4);
+	border: 2px solid var(--main);
+	transition-duration: 0.1s;
+}
+button.centered.fixed {
+	margin: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+button:active {
+	background-color: var(--black);
+	color: var(--main);
+}

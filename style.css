@@ -105,7 +105,12 @@ p {
 	margin: var(--padding) 0px 0px var(--padding);
 	color: var(--main);
 	padding: calc(var(--padding) * 2);
-	max-width: 500px;
+}
+
+a {
+	margin: var(--padding) 0px 0px var(--padding);
+	color: var(--cyan);
+	padding: calc(var(--padding) * 2);
 }
 
 button {

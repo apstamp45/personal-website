@@ -6,27 +6,46 @@
 		<title>Title</title>
 		<link rel="stylesheet" href="./style.css">
 	</head>
-	<body style="height: 1500;">
+	<body style="min-height: 1500;">
 		<div class="bordered fixed menu" style="width: 48px; height: 48px;">
-			<button type="menu" class="centered fixed">But</button>
-		</div>
-		<div class="blue bordered">
-			<h1 style="min-height: 38px">Hello, World!</h1>
-		</div>
-		<div class="bordered cyan">
-			<div class="centered" style="max-width: 500px;">
-				<p class="bordered green">
-					This website is currently under development; please come back in 6 months to be disappointed by the un-progression.
-				</p>
-				<p class="bordered red">This text should, in theory, be red.</p>
-				<button type="submit" class="yellow ">Butn</button>
-			</div>
-			<div class="bordered magenta">
-				<p>Links:</p>
-				<ul>
-					<a href="https://github.com/apstamp45/">GitHub</a>
-				</ul>
+			<!--<button type="menu" class="centered fixed">But</button>-->
+			<div class="bordered centered fixed" style="width: 32px; height: 32px; background-color: var(--white);">
 			</div>
 		</div>
+		<div class="blue bordered" style="height: 48px">
+			<h1 class="cyan centered-v">Hello, World!</h1>
+		</div>
+		<div class="bordered blue" style="display: flex;">
+			<div class="" style="flex-grow: 1; float: left;"></div>
+			<div style="float: center; width: fit-content;">
+				<div class="bordered cyan">
+					<p class="green" style="text-align: center; font-size: x-large;">Welcome to the profile of apstamp45!</p>
+					<div class="bordered green" style="width: fit-content;">
+						<p class="yellow">
+							Here is some information about myself:
+						</p>
+						<ul class="yellow">
+							<li>Age: 17 years</li>
+						</ul>
+					</div>
+				</div>
+				<div class="flex">
+					<p class="bordered cyan" style="width: fit-content; position: relative; float: left;">
+						This sentence should contain a <a href=".">link</a>.
+					</p>
+					<button type="submit" class="cyan" style="position: relative; float: left;">Butn</button>
+				</div>
+				<div class="bordered cyan">
+					<div class="green">
+						<p>Links:</p>
+						<ul>
+							<li><p><a href="https://github.com/apstamp45/">GitHub</a></p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="" style="flex-grow: 1; float: right;">
+		</div>
+		<script src="./script.js"></script>
 	</body>
 </html>

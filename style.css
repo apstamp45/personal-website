@@ -1,6 +1,8 @@
 :root {
 	--main: #a89984;
 	--second: #ebdbb2;
+	--oposite: #282828;
+	--opposite-second: 3c3836;
 	--black: #282828;
 	--red: #cc241d;
 	--green: #98971a;
@@ -24,36 +26,50 @@
 .white {
 	--main: var(--white);
 	--second: var(--white-bright);
+	--oposite: var(--black);
+	--opposite-second: var(--black-bright);
 }
 
 .red {
 	--main: var(--red);
 	--second: var(--red-bright);
+	--oposite: var(--cyan);
+	--opposite-second: var(--cyan-bright);
 }
 
 .green {
 	--main: var(--green);
 	--second: var(--green-bright);
+	--oposite: var(--magenta);
+	--opposite-second: var(--magenta-bright);
 }
 
 .yellow {
 	--main: var(--yellow);
 	--second: var(--yellow-bright);
+	--oposite: var(--blue);
+	--opposite-second: var(--blue-bright);
 }
 
 .blue {
 	--main: var(--blue);
 	--second: var(--blue-bright);
+	--oposite: var(--yellow);
+	--opposite-second: var(--yellow-bright);
 }
 
 .magenta {
 	--main: var(--magenta);
 	--second: var(--magenta-bright);
+	--oposite: var(--green);
+	--opposite-second: var(--green-bright);
 }
 
 .cyan {
 	--main: var(--cyan);
 	--second: var(--cyan-bright);
+	--oposite: var(--red);
+	--opposite-second: var(--red-bright);
 }
 
 .bordered {
@@ -61,8 +77,25 @@
 	border-radius: calc(var(--padding) * 4);
 }
 
-.centered {
+.centered-h {
 	margin: var(--padding) auto 0px auto;
+}
+
+.centered-v {
+	position: relative;
+	top: 50%;
+	-ms-transform: translatey(-50%);
+	transform: translatey(-50%);
+}
+
+.centered {
+	margin: 0px;
+	margin-top: calc(var(--padding) / 2);
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .fixed.menu {
@@ -78,7 +111,6 @@ html {
 }
 
 body {
-	/*height: 1500;*/
 	background-color: var(--black);
 	color: var(--main);
 	font-family: Helvetica, Cursive;
@@ -92,25 +124,57 @@ div.bordered {
 	padding: 0px var(--padding) var(--padding) 0px;
 }
 div.centered {
-	margin: 0px auto 0px auto;
+	margin: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+div.flex {
+	display: flex;
 }
 
 h1 {
 	text-align: center;
 	color: var(--second);
-	margin: var(--padding);
+	margin: var(--padding) 0px 0px var(--padding);
 }
 
 p {
+	text-align: left;
+	font-size: medium;
 	margin: var(--padding) 0px 0px var(--padding);
 	color: var(--main);
 	padding: calc(var(--padding) * 2);
 }
 
 a {
-	margin: var(--padding) 0px 0px var(--padding);
-	color: var(--cyan);
-	padding: calc(var(--padding) * 2);
+	font-size: medium;
+	color: var(--oposite);
+	position: relative;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+}
+a:hover {
+	color: var(--opposite-second);
+}
+a::before {
+	content: "";
+	width: 100%;
+	height: 2px;
+	border-radius: 4px;
+	bottom: 0%;
+	left: 0%;
+	background-color: var(--opposite);
+	transform: scaleX(0%);
+	transform-origin: 0% 0%;
+	transition: all 0.3s ease-out;
+	position: absolute;
+}
+a:hover::before {
+	transform: scaleX(100%);
+	background-color: var(--opposite-second);
 }
 
 button {
@@ -132,4 +196,16 @@ button.centered.fixed {
 button:active {
 	background-color: var(--black);
 	color: var(--main);
+}
+
+ul {
+	color: var(--main);
+}
+
+li {
+	color: var(--main);
+}
+
+::selection {
+	background-color: var(--oposite);
 }

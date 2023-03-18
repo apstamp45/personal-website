@@ -1,18 +1,34 @@
-window.onload = function() {
-}
-
-document.getElementById("dropdown")
-		.addEventListener("mouseover", function() {
-	let items = document.getElementsByClassName("dropdown-item");
-	for (let i = 0; i < items.length; i++) {
-		items[i].classList.add("visible");
+let menuState = false;
+let menu = document.getElementById("dropdown");
+let itemsContainer = document.getElementById("dropdown-items");
+let items = document.getElementsByClassName("dropdown-item");
+menu.addEventListener("mouseover", function() {
+	if (!menuState) {
+		itemsContainer.classList.add("visible");
+		for (let i = 0; i < items.length; i++) {
+			items[i].classList.add("visible");
+		}
 	}
 });
-
-document.getElementById("dropdown")
-		.addEventListener("mouseout", function() {
-	let items = document.getElementsByClassName("dropdown-item");
-	for (let i = 0; i < items.length; i++) {
-		items[i].classList.remove("visible");
+menu.addEventListener("mouseout", function() {
+	if (!menuState) {
+		for (let i = 0; i < items.length; i++) {
+			items[i].classList.remove("visible");
+		}
+		itemsContainer.classList.remove("visible");
 	}
 });
+menu.addEventListener("click", function() {
+	menuState = !menuState;
+	if (menuState) {
+		itemsContainer.classList.add("visible");
+		for (let i = 0; i < items.length; i++) {
+			items[i].classList.add("visible");
+		}
+	} else {
+		itemsContainer.classList.remove("visible");
+		for (let i = 0; i < items.length; i++) {
+			items[i].classList.remove("visible");
+		}
+	}
+})

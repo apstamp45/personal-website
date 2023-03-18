@@ -1,8 +1,10 @@
 :root {
-	--main: #a89984;
-	--second: #ebdbb2;
-	--oposite: #282828;
-	--opposite-second: 3c3836;
+	--text: #a89984;
+	--text-bold: #ebdbb2;
+	--trim: #458588;
+	--trim-bold: #83a598;
+	--back: #282828;
+	--back-bold: #3c3836;
 	--black: #282828;
 	--red: #cc241d;
 	--green: #98971a;
@@ -23,62 +25,16 @@
 	--border: 2px;
 }
 
-.white {
-	--main: var(--white);
-	--second: var(--white-bright);
-	--oposite: var(--black);
-	--opposite-second: var(--black-bright);
-}
-
-.red {
-	--main: var(--red);
-	--second: var(--red-bright);
-	--oposite: var(--cyan);
-	--opposite-second: var(--cyan-bright);
-}
-
-.green {
-	--main: var(--green);
-	--second: var(--green-bright);
-	--oposite: var(--magenta);
-	--opposite-second: var(--magenta-bright);
-}
-
-.yellow {
-	--main: var(--yellow);
-	--second: var(--yellow-bright);
-	--oposite: var(--blue);
-	--opposite-second: var(--blue-bright);
-}
-
-.blue {
-	--main: var(--blue);
-	--second: var(--blue-bright);
-	--oposite: var(--yellow);
-	--opposite-second: var(--yellow-bright);
-}
-
-.magenta {
-	--main: var(--magenta);
-	--second: var(--magenta-bright);
-	--oposite: var(--green);
-	--opposite-second: var(--green-bright);
-}
-
-.cyan {
-	--main: var(--cyan);
-	--second: var(--cyan-bright);
-	--oposite: var(--red);
-	--opposite-second: var(--red-bright);
-}
-
 .bordered {
-	border: var(--border) solid var(--main);
+	border: var(--border) solid var(--trim);
 	border-radius: calc(var(--padding) * 4);
 }
 
 .centered-h {
-	margin: var(--padding) auto 0px auto;
+	position: relative;
+	left: 50%;
+	-ms-transform: translatex(-50%);
+	transform: translatex(-50%);
 }
 
 .centered-v {
@@ -104,16 +60,16 @@
 }
 
 html {
-	background-color: var(--black);
-	color: var(--main);
-	font-family: Helvetica, Cursive;
+	background-color: var(--back);
+	color: var(--text);
+	font-family: 'Share Teck Mono', monospace;
 	font-size: 16px;
 }
 
 body {
-	background-color: var(--black);
-	color: var(--main);
-	font-family: Helvetica, Cursive;
+	background-color: var(--back);
+	color: var(--text);
+	font-family: 'Share Teck Mono', monospace;
 	font-size: 16px;
 	margin: 0px;
 	padding: 0px var(--padding) var(--padding) 0px;
@@ -137,7 +93,17 @@ div.flex {
 
 h1 {
 	text-align: center;
-	color: var(--second);
+	color: var(--text-bold);
+	margin: var(--padding) 0px 0px var(--padding);
+}
+h2 {
+	text-align: center;
+	color: var(--text-bold);
+	margin: var(--padding) 0px 0px var(--padding);
+}
+h3 {
+	text-align: center;
+	color: var(--text-bold);
 	margin: var(--padding) 0px 0px var(--padding);
 }
 
@@ -145,19 +111,19 @@ p {
 	text-align: left;
 	font-size: medium;
 	margin: var(--padding) 0px 0px var(--padding);
-	color: var(--main);
+	color: var(--text);
 	padding: calc(var(--padding) * 2);
 }
 
 a {
 	font-size: medium;
-	color: var(--oposite);
+	color: var(--trim);
 	position: relative;
 	text-decoration: none;
 	transition: all 0.3s ease-out;
 }
 a:hover {
-	color: var(--opposite-second);
+	color: var(--trim-bold);
 }
 a::before {
 	content: "";
@@ -166,7 +132,7 @@ a::before {
 	border-radius: 4px;
 	bottom: 0%;
 	left: 0%;
-	background-color: var(--opposite);
+	background-color: var(--trim);
 	transform: scaleX(0%);
 	transform-origin: 0% 0%;
 	transition: all 0.3s ease-out;
@@ -174,15 +140,15 @@ a::before {
 }
 a:hover::before {
 	transform: scaleX(100%);
-	background-color: var(--opposite-second);
+	background-color: var(--trim-bold);
 }
 
 button {
 	margin: var(--padding) 0px 0px var(--padding);
-	background-color: var(--main);
-	color: var(--black);
+	background-color: var(--trim);
+	color: var(--back);
 	border-radius: calc(var(--padding) * 4);
-	border: 2px solid var(--main);
+	border: 2px solid var(--trim);
 	transition-duration: 0.1s;
 }
 button.centered.fixed {
@@ -194,18 +160,47 @@ button.centered.fixed {
 	transform: translate(-50%, -50%);
 }
 button:active {
-	background-color: var(--black);
-	color: var(--main);
+	background-color: var(--back);
+	color: var(--trim);
 }
 
 ul {
-	color: var(--main);
+	color: var(--text);
 }
 
 li {
-	color: var(--main);
+	color: var(--text);
 }
 
 ::selection {
-	background-color: var(--oposite);
+	border-radius: var(--padding);
+	background-color: var(--trim);
+}
+
+#dropdown {
+	position: fixed;
+	margin: 0;
+	width: fit-content;
+	height: fit-content;
+}
+
+#dropdown-button {
+	position: absolute;
+	margin: 0px 0px 0px var(--padding);
+	width: fit-content;
+	height: fit-content;
+}
+
+.dropdown-item {
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	margin: 0% 0% 0% var(--padding);
+	opacity: 0%;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+.dropdown-item.visible {
+	opacity: 100%;
+	transform: translateY(calc(100% + 4 * var(--padding) + 100% * var(--menu-item-number)));
 }

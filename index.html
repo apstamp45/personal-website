@@ -3,48 +3,39 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+		<!-- TODO Import DejaVu fonts -->
 		<title>Title</title>
 		<link rel="stylesheet" href="./style.css">
 	</head>
-	<body style="min-height: 1500;">
-		<div class="bordered fixed menu" style="width: 48px; height: 48px;">
+	<body style="height: 1500px">
+		<div id="dropdown">
 			<!--<button type="menu" class="centered fixed">But</button>-->
-			<div class="bordered centered fixed" style="width: 32px; height: 32px; background-color: var(--white);">
+			<div id="dropdown-button" class="bordered">
+				<button class="" style="position: relative;">Menu</button>
+			</div>
+			<div class="dropdown-item" style="--menu-item-number: 0">
+				<a href="https://github.com/apstamp45/">GitHub</a>
+			</div>
+			<div class="dropdown-item" style="--menu-item-number:1">
+				<a href="./contactme/">contact</a>
 			</div>
 		</div>
-		<div class="blue bordered" style="height: 48px">
-			<h1 class="cyan centered-v">Hello, World!</h1>
-		</div>
-		<div class="bordered blue" style="display: flex;">
-			<div class="" style="flex-grow: 1; float: left;"></div>
-			<div style="float: center; width: fit-content;">
-				<div class="bordered cyan">
-					<p class="green" style="text-align: center; font-size: x-large;">Welcome to the profile of apstamp45!</p>
-					<div class="bordered green" style="width: fit-content;">
-						<p class="yellow">
-							Here is some information about myself:
-						</p>
-						<ul class="yellow">
-							<li>Age: 17 years</li>
-						</ul>
-					</div>
-				</div>
-				<div class="flex">
-					<p class="bordered cyan" style="width: fit-content; position: relative; float: left;">
-						This sentence should contain a <a href=".">link</a>.
-					</p>
-					<button type="submit" class="cyan" style="position: relative; float: left;">Butn</button>
-				</div>
-				<div class="bordered cyan">
-					<div class="green">
-						<p>Links:</p>
-						<ul>
-							<li><p><a href="https://github.com/apstamp45/">GitHub</a></p></li>
-						</ul>
-					</div>
-				</div>
+		<div id="main" class="bordered blue centered-h" style="width: fit-content;">
+			<div class="white">
+				<div style="height: 20px;"></div>
+				<h1 class="centered-h">Hello, World!</h1>
+				<h3 class=centered-h>Welcome to my profile!</h3>
+				<div style="height: 20px;"></div>
+				<p style="width: 500px">
+				&nbsp;&nbsp;My name is Arnon Oldja. I am a senior homeschooler of 18. Some of my many interests include: programming, growing plants, origami, electronics, and animals. Check out my <a href="./blog/">blog</a> for a deeper dive into my world.<br/>
+				&nbsp;&nbsp;I am currently working part time as an assistant house remodler, learning a host of life skills. My dream is to have a remote software development job, but I generally adapt well to a variety of situations. I tend to especially enjoy learning things that force me to gain an understanding from the ground up such as electronics or CPU architectures.<br/>
+				&nbsp;&nbsp;I am located in Wadsworth, Ohio. To contact me, head over to my <a href="./contactme/">contact page</a>.<br/>
+				&nbsp;&nbsp;This website is still early in development, so not everything is working. Last change made on 3/17/2023.
+				</p>
 			</div>
-			<div class="" style="flex-grow: 1; float: right;">
 		</div>
 		<script src="./script.js"></script>
 	</body>

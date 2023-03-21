@@ -54,11 +54,6 @@
 	transform: translate(-50%, -50%);
 }
 
-.fixed.menu {
-	position: fixed;
-	top: 0px;
-}
-
 html {
 	background-color: var(--back);
 	color: var(--text);
@@ -113,6 +108,11 @@ p {
 	margin: var(--padding) 0px 0px var(--padding);
 	color: var(--text);
 	padding: calc(var(--padding) * 2);
+}
+
+img {
+	margin: var(--padding) 0px 0px var(--padding);
+	max-width: calc(100% - 5px);
 }
 
 a {
@@ -179,7 +179,7 @@ li {
 
 #main {
 	z-index: 1;
-	max-width: 500px;
+	max-width: 600px;
 	margin-left: 3px;
 	/*height: 1500px;*/
 }

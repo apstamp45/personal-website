@@ -1,0 +1,23 @@
+#title {
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+#description {
+	align-content: left;
+	text-align: left;
+	margin-left: 10px;
+	padding-bottom: 10px;
+}
+
+#date {
+	float: right;
+	width: fit-content;
+	padding: 0px;
+	padding-right: 10px;
+}
+
+#content {
+	max-width: 500px;
+	position: relative;
+}

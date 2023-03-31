@@ -121,6 +121,7 @@ a {
 	position: relative;
 	text-decoration: none;
 	transition: all 0.3s ease-out;
+	display: inline-block;
 }
 a:hover {
 	color: var(--trim-bold);
@@ -210,7 +211,7 @@ li {
 	transition: all 0.3s ease-in-out;
 }
 #dropdown-items.visible {
-	height: calc(var(--menu-items-count) * (14pt + var(--padding)));
+	height: calc(var(--menu-items-count) * (23px));
 }
 
 .dropdown-item {

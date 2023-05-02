@@ -211,7 +211,7 @@ li {
 	transition: all 0.3s ease-in-out;
 }
 #dropdown-items.visible {
-	height: calc(var(--menu-items-count) * (23px));
+	height: calc(var(--menu-items-count) * (24px));
 }
 
 .dropdown-item {

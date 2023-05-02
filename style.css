@@ -61,6 +61,11 @@ html {
 	font-size: medium;
 }
 
+::selection {
+	color: var(--back);
+	background: var(--trim);
+}
+
 body {
 	background-color: var(--back);
 	color: var(--text);
@@ -104,10 +109,10 @@ h3 {
 
 p {
 	text-align: left;
-	font-size: medium;
+	font-size: 16px;
 	margin: var(--padding) 0px 0px var(--padding);
 	color: var(--text);
-	padding: calc(var(--padding) * 2);
+	padding: calc(var(--padding) * 2) calc(var(--padding)) calc(var(--padding)) calc(var(--padding) * 2) ;
 }
 
 img {
@@ -116,7 +121,7 @@ img {
 }
 
 a {
-	font-size: 12pt;
+	font-size: 16px;
 	color: var(--trim);
 	position: relative;
 	text-decoration: none;
@@ -173,11 +178,6 @@ li {
 	color: var(--text);
 }
 
-::selection {
-	border-radius: var(--padding);
-	background-color: var(--trim);
-}
-
 #main {
 	z-index: 1;
 	max-width: 600px;
@@ -211,13 +211,13 @@ li {
 	transition: all 0.3s ease-in-out;
 }
 #dropdown-items.visible {
-	height: calc(var(--menu-items-count) * (24px));
+	height: calc(var(--menu-items-count) * (16px + var(--padding)))
 }
 
 .dropdown-item {
 	position: relative;
 	width: fit-content;
-	height: fit-content;
+	height: 16px;
 	margin: var(--padding) 0% 0% var(--padding);
 	opacity: 0%;
 	transition-duration: 0.2s;

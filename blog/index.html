@@ -9,6 +9,7 @@
 		<!-- TODO Import DejaVu fonts -->
 		<title>Blog</title>
 		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
 		<div id="dropdown" class="bordered">
@@ -37,9 +38,17 @@
 			<div style="height: 35px;"></div>
 			<h1 class="centered-h">Blog</h1>
 			<div style="height: 20px;"></div>
-			<div id="post" class="post bordered" url="./first-post/index.html"></div>
+			<a class="post-link centered-h" href="./first-post/">
+				<div id="first-post" class="preview bordered">
+					<h2 class="preview-title">Test Blog Post</h2>
+					<p class="preview-date">March 19, 2023</p>
+					<br/>
+					<div style="height: 20px;"></div>
+					<img class="preview-image" src="./first-post/image0.png"/>
+					<p class="preview-description">This is the post description; it gives an overview of the post's purpose. This is some pointless text to check if the alignment of the preview is okay. Some more.</p>
+				</div>
+			</a>
 		</div>
-		<script src="../jquery-3.6.4.min.js"></script>
 		<script src="./script.js"></script>
 		<script src="../script.js"></script>
 	</body>

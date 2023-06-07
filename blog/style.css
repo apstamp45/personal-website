@@ -21,3 +21,36 @@
 	max-width: 500px;
 	position: relative;
 }
+
+.post-link::before {
+	display: none;
+}
+
+.preview {
+	max-width: 450px;
+}
+.preview::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.preview-title {
+	float: center;
+}
+
+.preview-date {
+	float: left;
+}
+
+.preview-image {
+	padding-top: calc(2 * var(--padding));
+	padding-left: calc(2 * var(--padding));
+	max-width: calc(60% - 5px);
+	border-radius: calc(2 * var(--padding));
+	float: right;
+}
+
+.preview-description {
+	padding: 10px;
+}

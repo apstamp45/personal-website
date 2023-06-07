@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
 		ajax.open("GET", url, false);
 		ajax.send();
 		let html = $.parseHTML(ajax.responseText);
-		post.innerHTML = html.getElementByID("date");
+		//post.innerHTML = html.getElementByID("date");
+		console.log(html);
 	}
 });

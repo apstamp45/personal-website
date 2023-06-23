@@ -44,7 +44,7 @@ menu.addEventListener("click", function() {
 });
 
 window.addEventListener("resize", () => {
-	if (window.innerWidth < 815) {
+	if (window.innerWidth < 928) {
 		let left = main.getBoundingClientRect().left;
 		console.log(left);
 		menu.style.left = left - 4.5 + "px";

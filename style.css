@@ -73,6 +73,9 @@ body {
 	font-size: 16px;
 	margin: 0px;
 	padding: 0px calc(var(--padding) + 2px) var(--padding) 0px;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
 }
 
 div.bordered {
@@ -108,8 +111,6 @@ h3 {
 }
 
 p {
-	-ms-text-size-adjust: 100%;
-	text-size-adjust: 100%;
 	text-align: left;
 	font-size: 16px;
 	margin: var(--padding) 0px 0px var(--padding);

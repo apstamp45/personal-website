@@ -46,11 +46,28 @@
 .preview-image {
 	padding-top: calc(2 * var(--padding));
 	padding-left: calc(2 * var(--padding));
-	width: clamp(300px, 100%, 70%);
+	width: 70%;
 	border-radius: calc(2 * var(--padding));
 	float: right;
 }
 
 .preview-description {
 	padding: 10px;
+}
+
+@media (pointer:none), (pointer:coarse) {
+	#content {
+		width: calc(100% - 2 * var(--padding));
+	}
+
+	.preview-image {
+		float: none;
+		position: relative;
+		left: 50%;
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		padding-left: var(--padding);
+		margin-left: 0px;
+		width: calc(100% - 2 * var(--padding));
+	}
 }

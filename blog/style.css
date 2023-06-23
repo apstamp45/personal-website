@@ -27,7 +27,7 @@
 }
 
 .preview {
-	max-width: 450px;
+	max-width: 500px;
 }
 .preview::after {
   content: "";
@@ -46,7 +46,7 @@
 .preview-image {
 	padding-top: calc(2 * var(--padding));
 	padding-left: calc(2 * var(--padding));
-	max-width: calc(60% - 5px);
+	width: clamp(300px, 100%, 70%);
 	border-radius: calc(2 * var(--padding));
 	float: right;
 }

@@ -4,6 +4,7 @@
 	--trim: #458588;
 	--trim-bold: #83a598;
 	--back: #282828;
+	--back-rgb: 40, 40, 40;
 	--back-bold: #3c3836;
 	--black: #282828;
 	--red: #cc241d;
@@ -194,9 +195,10 @@ li {
 	width: fit-content;
 	height: fit-content;
 	min-height: calc(12pt + var(--padding) * 3);
-	margin-top: 0;
+	margin-top: 0px;
+	padding-bottom: 0px;
 	overflow: hidden;
-	background-color: var(--back);
+	background-color: rgba(var(--back-rgb), 0.85);
 }
 
 #dropdown-button {
@@ -209,12 +211,12 @@ li {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	height: 0px;
+	height: calc(2 * var(--padding));
 	width: fit-content;
 	transition: all 0.3s ease-in-out;
 }
 #dropdown-items.visible {
-	height: calc(var(--menu-items-count) * (16px + var(--padding)))
+	height: calc(var(--menu-items-count) * (16px + var(--padding)) + var(--padding));
 }
 
 .dropdown-item {

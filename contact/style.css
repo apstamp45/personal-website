@@ -1,0 +1,35 @@
+#contact-field {
+	max-width: 500px;
+}
+
+h3.contact-point {
+	text-align: left;
+}
+
+.contact-text {
+	padding-left: 50px;
+}
+
+div.spacer {
+	height: 30px;
+}
+
+.tooltip {
+	width: fit-content;
+	overflow: show;
+	position: relative;
+}
+.tooltip-text {
+	color: var(--trim);
+	position: absolute;
+	top: 5px;
+	left: calc(50% + 25px);
+	transform: translate(-50%, 0%);
+	transition: all 0.3s ease-out;
+	opacity: 0;
+}
+.tooltip:hover .tooltip-text {
+	color: var(--trim-bold);
+	transform: translate(-50%, calc(-100% + var(--padding)));
+	opacity: 0.5;
+}

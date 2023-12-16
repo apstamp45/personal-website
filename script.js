@@ -3,6 +3,7 @@ let menu = document.getElementById("dropdown");
 let main = document.getElementById("main");
 let itemsContainer = document.getElementById("dropdown-items");
 let items = document.getElementsByClassName("dropdown-item");
+
 window.addEventListener("load", () => {
 	if (window.innerWidth < 815) {
 		let left = main.getBoundingClientRect().left;
@@ -11,6 +12,7 @@ window.addEventListener("load", () => {
 	} else {
 		menu.style.left = "";
 	}
+	checkMenuPosition();
 });
 menu.addEventListener("mouseover", function() {
 	if (!menuState) {
@@ -44,11 +46,29 @@ menu.addEventListener("click", function() {
 });
 
 window.addEventListener("resize", () => {
+	checkMenuPosition();
+});
+
+function checkMenuPosition() {
 	if (window.innerWidth < 928) {
 		let left = main.getBoundingClientRect().left;
 		console.log(left);
 		menu.style.left = left - 4.5 + "px";
 	} else {
 		menu.style.left = "";
+	}
+}
+
+const span = document.querySelector("span");
+
+span.onclick = function() {
+	document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+	event.preventDefault();
+	if (event.clipboardData) {
+		event.clipboardData.setData("text/plain", span.textContent);
+		console.log(event.clipboardData.getData("text"))
 	}
 });

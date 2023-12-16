@@ -64,7 +64,7 @@ html {
 
 ::selection {
 	color: var(--back);
-	background: var(--trim);
+	background: var(--trim-bold);
 }
 
 body {
@@ -94,6 +94,13 @@ div.centered {
 }
 div.flex {
 	display: flex;
+}
+
+div.divider {
+	height: 2px;
+	background-color: var(--trim);
+	width: 80%;
+	border-radius: 4px;
 }
 
 h1 {

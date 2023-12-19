@@ -190,6 +190,27 @@ li {
 	color: var(--text);
 }
 
+span {
+	width: fit-content;
+    overflow: show;
+    position: relative;
+}
+span::after {
+    color: var(--trim);
+    content: "Copy";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 0.3s ease-out;
+    opacity: 0;
+}
+span:hover::after {
+    color: var(--trim-bold);
+    transform: translate(-50%, calc(-100% + var(--padding)));
+    opacity: 0.5;
+}
+
 #main {
 	z-index: 1;
 	max-width: 700px;

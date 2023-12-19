@@ -59,16 +59,9 @@ function checkMenuPosition() {
 	}
 }
 
-const span = document.querySelector("span");
-
-span.onclick = function() {
-	document.execCommand("copy");
+const span = document.getElementsByTagName("span");
+for (let i = 0; i < span.length; i++) {
+	span.item(i).onclick = function() {
+		navigator.clipboard.writeText(span.item(i).innerText);
+	};
 }
-
-span.addEventListener("copy", function(event) {
-	event.preventDefault();
-	if (event.clipboardData) {
-		event.clipboardData.setData("text/plain", span.textContent);
-		console.log(event.clipboardData.getData("text"))
-	}
-});

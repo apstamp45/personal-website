@@ -44,11 +44,15 @@
 }
 
 .preview-image {
-	padding-top: calc(2 * var(--padding));
-	padding-left: calc(2 * var(--padding));
-	width: 70%;
 	border-radius: calc(2 * var(--padding));
-	float: right;
+	padding-top: 0px;
+	margin-left: calc(var(--padding) / 2);
+	width: 450px;
+	max-width: 80%;
+	position: relative;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .preview-description {

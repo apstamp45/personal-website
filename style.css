@@ -126,8 +126,18 @@ p {
 	color: var(--text);
 	padding: calc(var(--padding) * 2) calc(var(--padding)) calc(var(--padding)) calc(var(--padding) * 2) ;
 }
+p.image-description {
+	position: relative;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	padding-top: 0px;
+	width: fit-content;
+	max-width: 90%;
+}
 
 img {
+	border-radius: calc(2 * var(--padding));
 	margin: var(--padding) 0px 0px var(--padding);
 	max-width: calc(100% - 5px);
 }

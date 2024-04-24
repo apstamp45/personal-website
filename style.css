@@ -64,7 +64,7 @@ html {
 
 ::selection {
 	color: var(--back);
-	background: var(--trim-bold);
+	background: var(--trim);
 }
 
 body {

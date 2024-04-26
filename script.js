@@ -50,14 +50,10 @@ profile = document.getElementById("profile")
 function adjustSize(profile) {
 	if (document.getElementById("main").offsetWidth < 470) {
 		profile.style.width = "100%";
-		profile.style.paddingBottom = "16px";
-		profile.style.marginLeft = "0px";
-		profile.style.marginRight = "var(--padding)";
+		profile.style.marginRight = "0px";
 	} else {
 		profile.style.width = "30%"
-		profile.style.paddingBottom = "0px";
-		profile.style.marginLeft = "var(--padding)";
-		profile.style.marginRight = "0px";
+		profile.style.marginRight = "8px";
 	}
 }
 profile.addEventListener("load", adjustSize(profile));

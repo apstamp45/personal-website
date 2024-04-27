@@ -14,6 +14,9 @@ window.addEventListener("load", () => {
 	}
 	checkMenuPosition();
 });
+window.addEventListener("resize", () => {
+	checkMenuPosition();
+});
 
 menu.addEventListener("mouseover", function() {
 	if (!menuState) {
@@ -44,23 +47,6 @@ menu.addEventListener("click", function() {
 			items[i].classList.remove("visible");
 		}
 	}
-});
-
-profile = document.getElementById("profile")
-function adjustSize(profile) {
-	if (document.getElementById("main").offsetWidth < 470) {
-		profile.style.width = "100%";
-		profile.style.marginRight = "0px";
-	} else {
-		profile.style.width = "30%"
-		profile.style.marginRight = "8px";
-	}
-}
-profile.addEventListener("load", adjustSize(profile));
-
-window.addEventListener("resize", () => {
-	checkMenuPosition();
-	adjustSize(profile);
 });
 
 function checkMenuPosition() {

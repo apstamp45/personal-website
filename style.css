@@ -1,4 +1,5 @@
 :root {
+	/* Color palette borrowed from morhetz at https://github.com/morhetz/gruvbox */
 	--text: #a89984;
 	--text-bold: #ebdbb2;
 	--trim: #458588;
@@ -62,11 +63,6 @@ html {
 	font-size: medium;
 }
 
-::selection {
-	color: var(--back);
-	background: var(--trim);
-}
-
 body {
 	background-color: var(--back);
 	color: var(--text);
@@ -95,7 +91,6 @@ div.centered {
 div.flex {
 	display: flex;
 }
-
 div.divider {
 	height: 2px;
 	background-color: var(--trim);
@@ -139,7 +134,7 @@ p.image-description {
 img {
 	border-radius: calc(2 * var(--padding));
 	margin: var(--padding) 0px 0px var(--padding);
-	max-width: calc(100% - 5px);
+	max-width: calc(100% - var(--padding));
 }
 
 a {
@@ -269,6 +264,11 @@ span:hover::after {
 }
 .dropdown-item.visible {
 	opacity: 100%;
+}
+
+::selection {
+	color: var(--back);
+	background: var(--trim);
 }
 
 @media (pointer:none), (pointer:coarse) {

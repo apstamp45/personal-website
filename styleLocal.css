@@ -1,0 +1,6 @@
+#profile {
+	min-width: 250px;
+	width: 30%;
+	float: right;
+	margin: var(--padding) calc(2 * var(--padding)) calc(3 * var(--padding)) calc(3 * var(--padding));
+}

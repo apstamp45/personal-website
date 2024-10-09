@@ -202,7 +202,7 @@ span {
 }
 span::after {
     color: var(--trim);
-    content: "Copy";
+    content: attr(after-content);
     position: absolute;
     top: -4px;
     left: 50%;

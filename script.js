@@ -61,7 +61,13 @@ function checkMenuPosition() {
 
 const span = document.getElementsByTagName("span");
 for (let i = 0; i < span.length; i++) {
-	span.item(i).onclick = function() {
+	let item = span.item(i);
+	item.setAttribute("after-content", "Copy");
+	item.addEventListener("click", function() {
 		navigator.clipboard.writeText(span.item(i).innerText);
-	};
+		item.setAttribute("after-content", "Copied");
+	});
+	item.addEventListener("mouseenter", function() {
+		item.setAttribute("after-content", "Copy");
+	});
 }
